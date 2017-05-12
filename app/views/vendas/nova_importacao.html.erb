@@ -1,0 +1,46 @@
+<div class="imx-grid mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+
+    <h4><%= t('importacao_vendas') %></h4>
+
+	<%= form_tag({action: :importar}, multipart: true) do %>
+
+		<% if not notice.nil? %>
+			<div class="imx-alert">
+
+				<%= notice %>
+
+				<% if not @venda.nil? and @venda.errors.any? %>
+				    <ul>
+				    	<% @venda.errors.full_messages.each do |message| %>
+				    		<li><%= message %></li>
+				    	<% end %>
+				 	</ul>	
+				<% end %>
+			</div>
+		<% end %>
+
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--file">		
+			<input class="mdl-textfield__input" placeholder="Arquivo TXT" type="text" name="txt" id="txt" readonly/>
+			<div class="mdl-button mdl-button--primary mdl-button--icon mdl-button--file">
+      			<i class="material-icons">attach_file</i>
+				<%= file_field_tag 'txt', id: 'uploadBtn', accept: 'text/plain', required: true %>
+			</div>
+		</div>
+
+		<div>
+			<%= submit_tag t('importar'), :class => "mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" %>
+		</div>
+	<% end %>
+
+	<br><div class="mdl-card__actions mdl-card--border"></div>
+
+    <%= link_to t('voltar'), root_path, :class => "mdl-button mdl-js-button mdl-js-ripple-effect" %>
+
+    </div>
+</div>
+<script type="text/javascript">
+	document.getElementById("uploadBtn").onchange = function () {
+    	document.getElementById("txt").value = this.files[0].name;
+	};
+</script>

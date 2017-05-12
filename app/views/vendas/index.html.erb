@@ -1,0 +1,44 @@
+<div class="imx-grid mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+
+    <h4><%= t('vendas') %></h4>
+
+    <% if not notice.nil? %>
+		<div class="imx-success">
+			<%= notice %>
+		</div>
+	<% end %>
+
+    <table class="mdl-data-table mdl-js-data-table mdl-shadow--4dp">
+    	<thead>
+	        <tr>
+				<th class="mdl-data-table__cell--non-numeric"><%= t('activerecord.attributes.venda.comprador') %></th>
+				<th class="mdl-data-table__cell--non-numeric"><%= t('activerecord.attributes.venda.descricao') %></th>
+				<th><%= t('activerecord.attributes.venda.preco_unitario') %></th>
+				<th><%= t('activerecord.attributes.venda.quantidade') %></th>
+				<th class="mdl-data-table__cell--non-numeric"><%= t('activerecord.attributes.venda.endereco') %></th>
+				<th class="mdl-data-table__cell--non-numeric"><%= t('activerecord.attributes.venda.fornecedor') %></th>
+			</tr>
+  		</thead>
+
+  		<tbody>
+		    <% @vendas.each do |v| %>
+		      <tr>
+		        <td class="mdl-data-table__cell--non-numeric"><%= v.comprador %></td>
+		        <td class="mdl-data-table__cell--non-numeric"><%= v.descricao %></td>
+		        <td><%= formatar_valor(v.preco_unitario) %></td>
+		        <td><%= v.quantidade %></td>
+		        <td class="mdl-data-table__cell--non-numeric"><%= v.endereco %></td>
+		        <td class="mdl-data-table__cell--non-numeric"><%= v.fornecedor %></td>
+		      </tr>
+		    <% end %>    
+		  </tbody>
+
+	</table>
+
+	<br>
+
+    <%= link_to t('importar_vendas'), importar_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" %>
+
+    </div>
+</div>

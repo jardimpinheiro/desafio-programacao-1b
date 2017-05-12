@@ -1,3 +1,19 @@
+# Instruções de instalação
+
+1. `$ git clone https://github.com/jardimpinheiro/desafio-programacao-1b.git`
+2. `$ cd desafio-programacao-1b`
+3. `$ bundle install`
+4. `$ rake db:migrate RAILS_ENV=test`
+5. `$ rake test`
+6. `$ rake db:migrate`
+7. `$ rails server -b 0.0.0.0` [com o parâmetro `-b 0.0.0.0` é liberado acesso para qualquer IP. Necessário para acessar via celulares ou tablets]
+8. Abrir o seguinte endereço no browser: `http://localhost:3000`
+
+## Bibliotecas utilizadas
+
+- Estilo das páginas da app: Google Material Design Lite `https://getmdl.io/`
+- Biblioteca de inserção de dados em massa no banco de dados: activerecord-import `https://github.com/zdennis/activerecord-import`
+
 # Desafio de programação 1B
 
 A idéia deste desafio é nos permitir avaliar melhor as habilidades de candidatos à vagas de programador, de vários níveis.

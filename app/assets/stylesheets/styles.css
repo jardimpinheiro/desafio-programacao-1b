@@ -1,0 +1,589 @@
+body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Disable ugly boxes around images in IE10 */
+a img{
+  border: 0px;
+}
+
+::-moz-selection {
+  background-color: #ee6e73;
+  color: #fff;
+}
+
+::selection {
+  background-color: #ee6e73;
+  color: #fff;
+}
+
+.mdl-button--file input {
+  cursor: pointer;
+  height: 100%;
+  right: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 300px;
+  z-index: 4;
+}
+
+.mdl-textfield--file .mdl-textfield__input {
+  box-sizing: border-box;
+  width: calc(100% - 32px);
+}
+.mdl-textfield--file .mdl-button--file {
+  right: 0;
+}
+
+.mdl-layout__content {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.mdl-data-table {
+  width: 100%;
+}
+
+.imx-search-box .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.imx-header .mdl-menu__container {
+  z-index: 50;
+  margin: 0 !important;
+}
+
+
+.mdl-textfield--expandable {
+  width: auto;
+}
+
+.imx-fab {
+  position: absolute;
+  right: 20%;
+  bottom: -26px;
+  z-index: 3;
+  background: #64ffda !important;
+  color: black !important;
+}
+
+.imx-mobile-title {
+  display: none !important;
+}
+
+
+.imx-logo-image {
+  height: 53px;
+  width: 88px;
+}
+
+.imx-logo-image-mobile {
+  height: 45px;
+  width: 75px;
+}
+
+.imx-header {
+  overflow: visible;
+  background-color: white;
+}
+
+  .imx-header .material-icons {
+    color: #767777 !important;
+  }
+
+  .imx-header .mdl-layout__drawer-button {
+    background: transparent;
+    color: #767777;
+  }
+
+  .imx-header .mdl-navigation__link {
+    color: #757575;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .imx-navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .imx-navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    justify-content: flex-end;
+    width: 800px;
+  }
+
+  .imx-search-box.is-focused + .imx-navigation-container {
+    opacity: 0;
+    width: 100px;
+  }
+
+
+  .imx-navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+  }
+
+    .imx-navigation .mdl-navigation__link:hover {
+      border-bottom: 4px solid #ee6e73;
+    }
+
+  .imx-search-box {
+    order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .imx-more-button {
+    order: 3;
+  }
+
+
+.imx-drawer {
+  border-right: none;
+}
+
+  .imx-drawer-separator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 8px 0;
+  }
+
+  .imx-drawer .mdl-navigation__link.mdl-navigation__link {
+    font-size: 14px;
+    color: #757575;
+  }
+
+  .imx-drawer span.mdl-navigation__link.mdl-navigation__link {
+    color: #ee6e73;
+  }
+
+  .imx-drawer .mdl-layout-title {
+    position: relative;
+    background: #ffffff;
+    height: 80px;
+  }
+
+    .imx-drawer .imx-logo-image {
+      position: absolute;
+      bottom: 16px;
+    }
+
+.imx-be-together-section {
+  position: relative;
+  height: 800px;
+  width: auto;
+  background-color: #f3f3f3;
+  background: url('images/slide01.jpg') center 30% no-repeat;
+  background-size: cover;
+}
+
+.logo-font {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1;
+  color: #767777;
+  font-weight: 500;
+}
+
+.imx-slogan {
+  font-size: 60px;
+  padding-top: 160px;
+}
+
+.imx-sub-slogan {
+  font-size: 21px;
+  padding-top: 24px;
+}
+
+.imx-create-character {
+  font-size: 21px;
+  padding-top: 400px;
+}
+
+  .imx-create-character a {
+    text-decoration: none;
+    color: #767777;
+    font-weight: 300;
+  }
+
+.imx-screen-section {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.imx-screens {
+  text-align: right;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.imx-screen {
+  text-align: center;
+}
+
+.imx-screen .imx-link {
+  margin-top: 16px;
+  display: block;
+  z-index: 2;
+}
+
+.imx-image-link {
+  text-decoration: none;
+}
+
+.imx-wear {
+  display: inline-block;
+  width: 160px;
+  margin-right: 32px;
+}
+
+  .imx-wear .imx-screen-image {
+    width: 40%;
+    z-index: 1;
+  }
+
+
+.imx-phone {
+  display: inline-block;
+  width: 64px;
+  margin-right: 48px;
+}
+
+  .imx-phone .imx-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+
+.imx-tablet {
+  display: inline-block;
+  width: 110px;
+  margin-right: 64px;
+}
+
+  .imx-tablet .imx-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+  .imx-tablet .imx-link {
+    display: block;
+    z-index: 2;
+  }
+
+
+.imx-tv {
+  display: inline-block;
+  width: 300px;
+  margin-right: 80px;
+}
+
+  .imx-tv .imx-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+
+.imx-auto {
+  display: inline-block;
+  width: 300px;
+  overflow: hidden;
+}
+
+  .imx-auto .imx-screen-image {
+    display: block;
+    height: 300px;
+    z-index: 1;
+  }
+
+
+.imx-wear-section {
+  position: relative;
+  background: url('images/wear.png') center top no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+
+.imx-wear-band {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #37474f;
+}
+
+.imx-wear-band-text {
+  max-width: 800px;
+  margin-left: 25%;
+  padding: 24px;
+  text-align: left;
+  color: white;
+}
+
+  .imx-wear-band-text p {
+    padding-top: 8px;
+  }
+
+.imx-menu-link {
+  text-decoration: none;
+  color: #000000 !important;
+}
+
+.imx-link {
+  text-decoration: none;
+  color: #ee6e73 !important;
+}
+
+  .imx-link:hover {
+    color: #eb565b !important;
+  }
+
+  .imx-link .material-icons {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+  }
+
+.imx-alt-link {
+  text-decoration: none;
+  color: #64ffda !important;
+  font-size: 16px;
+}
+
+  .imx-alt-link:hover {
+    color: #00bfa5 !important;
+  }
+
+  .imx-alt-link .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+.imx-customized-section {
+  text-align: center;
+}
+
+.imx-customized-section-text {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 16px 0 16px;
+}
+
+  .imx-customized-section-text p {
+    padding-top: 16px;
+  }
+
+.imx-customized-section-image {
+  background: url('images/devices.jpg') center top no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.imx-more-section {
+  padding: 80px 0;
+  max-width: 1044px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .imx-more-section .imx-section-title {
+    margin-left: 12px;
+    padding-bottom: 24px;
+  }
+
+.imx-card-container {
+}
+
+  .imx-card-container .mdl-card__media {
+    overflow: hidden;
+    background: transparent;
+  }
+
+    .imx-card-container .mdl-card__media img {
+      width: 100%;
+    }
+
+  .imx-card-container .mdl-card__title {
+    background: transparent;
+    height: auto;
+  }
+
+  .imx-card-container .mdl-card__title-text {
+    color: black;
+    height: auto;
+  }
+
+  .imx-card-container .mdl-card__supporting-text {
+    height: auto;
+    color: black;
+    padding-bottom: 56px;
+  }
+
+  .imx-card-container .mdl-card__actions {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .imx-card-container .mdl-card__actions a {
+    border-top: none;
+    font-size: 16px;
+  }
+
+.imx-footer {
+  background-color: #fafafa;
+  position: relative;
+}
+
+  .imx-footer a:hover {
+    color: #ee6e73;
+  }
+
+  .imx-footer .mdl-mega-footer--top-section::after {
+    border-bottom: none;
+  }
+
+  .imx-footer .mdl-mega-footer--middle-section::after {
+    border-bottom: none;
+  }
+
+  .imx-footer .mdl-mega-footer--bottom-section {
+    position: relative;
+  }
+
+  .imx-footer .mdl-mega-footer--bottom-section a {
+    margin-right: 2em;
+  }
+
+  .imx-footer .mdl-mega-footer--right-section a .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+
+.imx-link-menu:hover {
+  cursor: pointer;
+}
+
+.imx-grid {
+  max-width: 90%;
+}
+
+
+/**** Mobile layout ****/
+@media (max-width: 900px) {
+  .imx-navigation-container {
+    display: none;
+  }
+
+  .imx-title {
+    display: none !important;
+  }
+
+  .imx-mobile-title {
+    display: block !important;
+    position: absolute;
+    left: calc(50% - 70px);
+    top: 12px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
+     consecutive "+" operators in some cases. Therefore, we need to use both
+     here to cover all the bases. */
+  .imx.imx-search-box.is-focused ~ .imx-mobile-title,
+  .imx-search-box.is-focused + .imx-navigation-container + .imx-mobile-title {
+    opacity: 0;
+  }
+
+  .imx-more-button {
+    display: none;
+  }
+
+  .imx-search-box.is-focused {
+    width: calc(100% - 48px);
+  }
+
+  .imx-search-box .mdl-textfield__expandable-holder {
+    width: 100%;
+  }
+
+  .imx-be-together-section {
+    height: 350px;
+  }
+
+  .imx-slogan {
+    font-size: 26px;
+    margin: 0 16px;
+    padding-top: 24px;
+  }
+
+  .imx-sub-slogan {
+    font-size: 16px;
+    margin: 0 16px;
+    padding-top: 8px;
+  }
+
+  .imx-create-character {
+    padding-top: 200px;
+    font-size: 16px;
+  }
+
+  .imx-create-character img {
+    height: 12px;
+  }
+
+  .imx-fab {
+    display: none;
+  }
+
+  .imx-wear-band-text {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .imx-footer .mdl-mega-footer--bottom-section {
+    display: none;
+  }
+}
+
+.imx-alert {
+    color:#555;
+    border-radius:10px;
+    padding:10px 36px;
+    margin:20px 0px 20px 0px;
+    background: #ffecec  no-repeat 16px 12px;
+    border:3px solid #f5aca6;
+}
+
+.imx-success {
+    color:#1f2e2e;
+    border-radius:10px;
+    padding:10px 36px;
+    margin:20px 0px 20px 0px;
+    background: #d9ffb3  no-repeat 16px 12px;
+    border:3px solid #d9ffb3;
+}
+
+.imx-alert span {
+    font-weight:bold;
+}
+
+.text-area {
+  white-space: pre-wrap;
+}
