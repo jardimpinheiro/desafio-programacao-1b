@@ -19,9 +19,7 @@ class ActiveSupport::TestCase
 
   def assert_message(record, field, message)
       has_message = false
-      puts message
       record.errors[field].each do |msg|
-        puts msg
           if msg == message
               has_message = true
               break

@@ -6,8 +6,10 @@
 4. `$ rake db:migrate RAILS_ENV=test`
 5. `$ rake test`
 6. `$ rake db:migrate`
-7. `$ rails server -b 0.0.0.0` [com o parâmetro `-b 0.0.0.0` é liberado acesso para qualquer IP. Necessário para acessar via celulares ou tablets]
+7. `$ rails server -b 0.0.0.0`
 8. Abrir o seguinte endereço no browser: `http://localhost:3000`
+
+> No comando para iniciar o servidor utiliza-se o parâmetro `-b 0.0.0.0` para liberar acesso no servidor para qualquer IP. Necessário para acessar via celulares ou tablets.
 
 ## Bibliotecas utilizadas
 
