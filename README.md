@@ -11,6 +11,8 @@
 
 > No comando para iniciar o servidor utiliza-se o parâmetro `-b 0.0.0.0` para liberar acesso no servidor para qualquer IP. Necessário para acessar via celulares ou tablets.
 
+> Design Responsivo: É possível acessar a aplicação via mobile ou tablet
+
 ## Bibliotecas utilizadas
 
 - Estilo das páginas da app: Google Material Design Lite `https://getmdl.io/`
