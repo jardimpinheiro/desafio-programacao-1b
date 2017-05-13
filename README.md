@@ -15,8 +15,8 @@
 
 ## Bibliotecas utilizadas
 
-- Estilo das páginas da app: Google Material Design Lite `https://getmdl.io/`
-- Biblioteca de inserção de dados em massa no banco de dados: activerecord-import `https://github.com/zdennis/activerecord-import`
+- Estilo das páginas da app: Google Material Design Lite (https://getmdl.io/)
+- Biblioteca de inserção de dados em massa no banco de dados: activerecord-import (https://github.com/zdennis/activerecord-import)
 
 # Desafio de programação 1B
 
