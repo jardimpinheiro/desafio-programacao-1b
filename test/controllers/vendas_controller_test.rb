@@ -2,6 +2,9 @@ require 'test_helper'
 
 class VendasControllerTest < ActionController::TestCase
 
+  include ActionView::Helpers::NumberHelper
+  include ApplicationHelper
+
   test "GET /" do
     get :index
     assert_response :success
@@ -21,6 +24,13 @@ class VendasControllerTest < ActionController::TestCase
     
     assert_redirected_to root_url
 
+    expected_numero_vendas = 4
+    expected_receita_bruta = 95.0
+    
+    assert_equal  I18n.t('importacao_com_sucesso', 
+                    numero_vendas: expected_numero_vendas, 
+                    receita: formatar_valor(expected_receita_bruta)), 
+                  flash[:notice]
   end
 
   test "POST /importar -> deve importar 5232 registros de vendas" do
@@ -30,6 +40,14 @@ class VendasControllerTest < ActionController::TestCase
     end
     
     assert_redirected_to root_url
+
+    expected_numero_vendas = 5232
+    expected_receita_bruta = 124260.0
+    
+    assert_equal  I18n.t('importacao_com_sucesso', 
+                    numero_vendas: expected_numero_vendas, 
+                    receita: formatar_valor(expected_receita_bruta)), 
+                  flash[:notice]
 
   end
 
